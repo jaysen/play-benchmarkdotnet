@@ -5,6 +5,13 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchMarkPlay", "BenchMarkPlay\BenchMarkPlay.csproj", "{64B6463C-E114-4440-9B2F-CE064641D949}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{719263D4-5921-4AEB-8944-56389E18533F}"
+	ProjectSection(SolutionItems) = preProject
+		result01.png = result01.png
+		result03.png = result03.png
+		result04.png = result04.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
