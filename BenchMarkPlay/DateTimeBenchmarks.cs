@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Engines;
+using BenchmarkDotNet.Order;
 using CommandLine;
 
 namespace BenchMarkPlay;
 
 [MemoryDiagnoser]
-[SimpleJob(RunStrategy.ColdStart)]
-[Orderer(BenchmarkDotNet.Order.SummaryOrderPolicy.FastestToSlowest)]
+//[ShortRunJob]
+[Orderer(SummaryOrderPolicy.FastestToSlowest)]
 [RankColumn]
 
 public class DateTimeBenchmarks
