@@ -36,12 +36,13 @@ public class DateParser
     public int GetYearFromSubstringManual(string dateTimeAsString)
     {
         var indexOfHyphen = dateTimeAsString.IndexOf('-');
-        string year = dateTimeAsString[..indexOfHyphen];
+        string yearAsString = dateTimeAsString[..indexOfHyphen];
+        //string yearAsString = dateTimeAsString.Substring(0,indexOfHyphen);
         int result = 0;
 
-        for (int i = 0; i < year.Length; i++)
+        for (int i = 0; i < yearAsString.Length; i++)
         {
-            result = result * 10 + (year[i] - '0');
+            result = result * 10 + (yearAsString[i] - '0');
         }
         return result;
     }
@@ -49,12 +50,12 @@ public class DateParser
     public int GetYearFromSpanManual(ReadOnlySpan<char> dateTimeAsSpan)
     {
         var indexOfHyphen = dateTimeAsSpan.IndexOf('-');
-        var year = dateTimeAsSpan.Slice(0, indexOfHyphen);
+        var yearAsSpan = dateTimeAsSpan[..indexOfHyphen];
         int result = 0;
 
-        for (int i = 0; i < year.Length; i++)
+        for (int i = 0; i < yearAsSpan.Length; i++)
         {
-            result = result * 10 + (year[i] - '0');
+            result = result * 10 + (yearAsSpan[i] - '0');
         }
         return result;
     }
