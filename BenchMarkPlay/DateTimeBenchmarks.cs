@@ -10,7 +10,7 @@ using CommandLine;
 namespace BenchMarkPlay;
 
 [MemoryDiagnoser]
-//[SimpleJob(RunStrategy.ColdStart)]
+[SimpleJob(RunStrategy.ColdStart)]
 [Orderer(BenchmarkDotNet.Order.SummaryOrderPolicy.FastestToSlowest)]
 [RankColumn]
 
